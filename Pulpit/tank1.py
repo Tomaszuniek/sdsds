@@ -149,6 +149,7 @@ def controls():
         writescr("Poruszanie= strzalki lewo prawo",black,-80)
         writescr("Poruszanie lufą= strzałki góra dół", black, -110)
         writescr("Strzał= spacja",black,-50)
+        writescr("Zmiana siły= A i D",black,0)
         pygame.draw.rect(gameDisplay,green,(135,480,130,75))
         pygame.draw.rect(gameDisplay,red,(535,480,130,75))
         mousepos=pygame.mouse.get_pos()
@@ -326,7 +327,7 @@ def fire2(dane,sila,wallx,wallh,currentplayer,life1,life2,enemytankx,enemytanky)
         clock.tick(60)
 
 def power(sila):
-    text=smallfont.render("Sila: "+str(sila)+"%",True, black)
+    text=smallfont.render("Siła: "+str(sila)+"%",True, black)
     gameDisplay.blit(text,[(display_width/2)-55,0])
 
 def life(zycie1,zycie2):
